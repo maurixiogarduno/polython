@@ -2,8 +2,12 @@
 
 <dom-module id="saludo-polymer">
   <template>
-    
-    <h1>Bienvenidos</h1>
+    <style>
+      h1{
+        color: blue;
+      }
+    </style>
+    <h1>Bienvenidos <content></content></h1>
   </template>
   <script>
     Polymer({
