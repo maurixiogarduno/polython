@@ -1,38 +1,17 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="hola-ejemplo">
-
+<dom-module id="saludo-polymer">
   <template>
     <style>
-      :host {
-        display: block;
+      h1{
+        color: blue;
       }
     </style>
-
-    <h2>Hello [[prop1]]!</h2>
+    <h1>Bienvenidos <content></content></h1>
   </template>
-
   <script>
-    /**
-     * `hola-ejemplo`
-     * muestra un mensaje de hola mundo
-     *
-     * @customElement
-     * @polymer
-     * @demo demo/index.html
-     */
-    class HolaEjemplo extends Polymer.Element {
-      static get is() { return 'hola-ejemplo'; }
-      static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'hola-ejemplo'
-          }
-        };
-      }
-    }
-
-    window.customElements.define(HolaEjemplo.is, HolaEjemplo);
+    Polymer({
+      is: "saludo-polymer"
+    });
   </script>
 </dom-module>
